@@ -3961,7 +3961,7 @@ int HisMaker::readChromosome(string chrom,char *seq,int max_len)
     chrom_file = dir_ + "/" + Genome::extendedChromName(chrom) + ".fa";
     file.open(chrom_file.c_str());
     if (!file.is_open()) {
-      cerr<<"Can't open file with chromosome sequence."<<endl;
+      cerr<<"Can't open file with chromosome sequence: "<<chrom_file<<endl;
       cerr<<"No chromosome/contig information parsed."<<endl;
       return ret;
     }
